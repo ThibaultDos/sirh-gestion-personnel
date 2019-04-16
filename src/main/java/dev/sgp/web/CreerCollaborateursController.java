@@ -32,7 +32,7 @@ public class CreerCollaborateursController extends HttpServlet {
 		String nom = req.getParameter("inputNom");
 		String prenom = req.getParameter("inputPrenom");
 				
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		formatter = formatter.withLocale(Locale.FRANCE);
 		LocalDate date = LocalDate.parse(req.getParameter("inputBirthday"), formatter);		
 		LocalDate dateNaissance = date;		
