@@ -19,7 +19,7 @@ public class EditerCollaborateursController extends HttpServlet {
 	
 		if (StringUtils.isEmpty(matriculeParam)){
 			resp.setContentType("text/html");
-			resp.getWriter().write("<h1>I AM ERROR (400)</h1>"
+			resp.getWriter().write("<h1>I AM ERROR.\nErreur (400)</h1>"
 					+ "un matricule est attendu");
 			resp.setStatus(400);
 		}
@@ -51,7 +51,7 @@ public class EditerCollaborateursController extends HttpServlet {
 		
 		if (StringUtils.isEmpty(matriculeParam) || StringUtils.isEmpty(titreParam) || StringUtils.isEmpty(nomParam) || StringUtils.isEmpty(prenomParam)){
 			resp.setContentType("text/html");
-			resp.getWriter().write("<h1>I AM ERROR (400)</h1>"
+			resp.getWriter().write("<h1>I AM ERROR.\nErreur (400)</h1>"
 					+ "<ul>"
 					+ "<li>un matricule est attendu</li>"
 					+ "<li>un titre est attendu</li>"
@@ -71,7 +71,6 @@ public class EditerCollaborateursController extends HttpServlet {
 					+ "<li>prénom="+ prenomParam + "</li>"
 					+ "</ul>");
 		}
-		
 		
 		else {
 			resp.getWriter().write("<h1>w00t !?</h1>");
